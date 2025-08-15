@@ -24,10 +24,10 @@
   )
   assert(type(header) == bool, message: "`header` must be a boolean or auto")
 
-  let plg = plugin("typst_blorem.wasm")
+  import plugin("typst_blorem.wasm"): seeded_lipsum
 
   let args = cbor.encode((n, seed, header))
-  let ret = cbor(plg.seeded_lipsum(args))
+  let ret = cbor(seeded_lipsum(args))
 
   ret
 }
