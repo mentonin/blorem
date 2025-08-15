@@ -10,7 +10,7 @@ However, it lets you use a different seed for the random text
 and optionally keep the first few words (Lorem ipsum...) as an identifier of blind text.
 
 ```typst
-#import "@preview/blorem:99.99.99": lorem
+#import "@local/blorem:99.99.99": lorem
 
 #lorem(30, seed: 0, header: true)
 
